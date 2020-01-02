@@ -106,7 +106,10 @@ namespace litefeel.RenameTools
         {
             var startNum = Settings.StartNumber;
             for (var i = 0; i < m_Selections.Count; i++)
+            {
+                Undo.RecordObject(m_Selections[i].gameObject, "Rename");
                 m_Selections[i].name = $"{m_NewName}{i + startNum}";
+            }
         }
 
         class SortCamper : IComparer<Transform>
