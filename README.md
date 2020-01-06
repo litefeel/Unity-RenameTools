@@ -30,7 +30,7 @@ Find the manifest.json file in the Packages folder of your project and edit it t
 
 1. Select `Edit > Preferences… > Rename Tools` from the menu
 2. Input the start number, like 1
-3. Select some gameobject in Hierarchy
+3. Select multiple game objects in the hierarchy
 4. Press Ctrl + Shift + R
 5. Click Rename button
 
