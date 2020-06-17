@@ -1,8 +1,7 @@
-using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using System.Linq;
 
 namespace litefeel.RenameTools
 {
@@ -71,10 +70,9 @@ namespace litefeel.RenameTools
             if (!dontRename)
             {
                 EditorGUILayout.LabelField($"rename count:{m_Selections.Count} -----");
-                var startNum = Settings.StartNumber;
                 for (var i = 0; i < m_Selections.Count; i++)
                 {
-                    EditorGUILayout.LabelField(m_Selections[i].name, $"{m_NewName}{i + startNum}");
+                    EditorGUILayout.LabelField(m_Selections[i].name, GetNewName(m_NewName, i));
                 }
             }
 
@@ -104,12 +102,21 @@ namespace litefeel.RenameTools
 
         private void DoRename()
         {
-            var startNum = Settings.StartNumber;
             for (var i = 0; i < m_Selections.Count; i++)
             {
                 Undo.RecordObject(m_Selections[i].gameObject, "Rename");
-                m_Selections[i].name = $"{m_NewName}{i + startNum}";
+                m_Selections[i].name = GetNewName(m_NewName, i);
             }
+        }
+
+        private string GetNewName(string format, int index)
+        {
+            string n = (index + Settings.StartNumber).ToString();
+            if (format.Contains("$n"))
+
+                return format.Replace("$n", n);
+            else
+                return $"{format}{n}";
         }
 
         class SortCamper : IComparer<Transform>
