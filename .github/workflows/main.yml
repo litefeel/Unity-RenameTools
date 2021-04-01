@@ -44,7 +44,7 @@ jobs:
 
       # Test
       - name: Run tests
-        uses: webbertakken/unity-test-runner@v1.7
+        uses: game-ci/unity-test-runner@v2
         id: tests
         with:
           customParameters: "-nographics"
@@ -58,13 +58,13 @@ jobs:
       #     targetPlatform: WebGL
 
       # Output
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         name: Upload tests
         with:
           name: Test results for ${{ matrix.testMode }} on unity ${{ matrix.unityVersion }}
           path: ${{ steps.tests.outputs.artifactsPath }}
 
-      # - uses: actions/upload-artifact@v1
+      # - uses: actions/upload-artifact@v2
       #   name: Upload build
       #   with:
       #     name: Build
