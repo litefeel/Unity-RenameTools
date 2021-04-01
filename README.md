@@ -67,3 +67,4 @@ Find the manifest.json file in the Packages folder of your project and edit it t
 
 [RenameTools]: https://github.com/litefeel/Unity-RenameTools (RenameTools)
 [issues]: https://github.com/litefeel/Unity-RenameTools/issues (RenameTools issues)
+
