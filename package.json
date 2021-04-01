@@ -1,19 +1,18 @@
 {
-    "name": "com.litefeel.renametools",
-    "displayName": "Rename Tools",
-    "version": "1.0.0",
-    "unity": "2018.3",
-    "description": "Align Tools is just perfect Unity asset plugin to rename game object.",
-    "keywords": [
-        "UI",
-        "Align",
-        "Tools"
-    ],
-    "author": {
-        "name": "litefeel",
-        "email": "litefeel@gmial.com",
-        "url": "https://www.litefeel.com"
-    },
-    "category": "Tools",
-    "dependencies": {}
+  "name": "com.litefeel.renametools",
+  "displayName": "Rename Tools",
+  "version": "2.0.0",
+  "unity": "2019.4",
+  "description": "Rename Tools is just perfect Unity asset plugin to rename game object.",
+  "keywords": [
+    "Rename",
+    "Tools"
+  ],
+  "author": {
+    "name": "litefeel",
+    "email": "litefeel@gmial.com",
+    "url": "https://www.litefeel.com"
+  },
+  "category": "Tools",
+  "type": "tool"
 }

@@ -16,22 +16,46 @@
 
 ## Install
 
+#### Using npm (Ease upgrade in Package Manager UI)**Recommend**
+
 Find the manifest.json file in the Packages folder of your project and edit it to look like this:
 ``` js
 {
+  "scopedRegistries": [
+    {
+      "name": "My Registry",
+      "url": "https://registry.npmjs.org",
+      "scopes": [
+        "com.litefeel"
+      ]
+    }
+  ],
   "dependencies": {
-    "com.litefeel.renametools": "https://github.com/litefeel/Unity-RenameTools.git",
+    "com.litefeel.renametools": "2.0.0",
     ...
   }
 }
 ```
+
+#### Using git
+
+Find the manifest.json file in the Packages folder of your project and edit it to look like this:
+``` js
+{
+  "dependencies": {
+    "com.litefeel.renametools": "https://github.com/litefeel/Unity-RenameTools.git#2.0.0",
+    ...
+  }
+}
+```
+
 
 ## How to use?
 
 1. Select `Edit > Preferences… > Rename Tools` from the menu
 2. Input the start number, like 1
 3. Select multiple game objects in the hierarchy
-4. Press Ctrl + Shift + R
+4. Press `Shift + F2`
 5. Click Rename button
 
 
