@@ -44,7 +44,7 @@ jobs:
 
       # Test
       - name: Run tests
-        uses: game-ci/unity-test-runner@v2
+        uses: litefeel/unity-test-runner@769165d798dabc88eece1ed34c2042611b9812c6
         id: tests
         with:
           customParameters: "-nographics"
